@@ -1,0 +1,18 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7C3AED;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#A78BFA;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="100" fill="url(#purpleGradient)"/>
+  <g transform="translate(100, 100)">
+    <!-- Star/Sparkle icon -->
+    <path d="M 0,-35 Q 8,-20 15,-10 L 35,-5 Q 20,0 15,10 L 0,5 L -15,10 Q -20,0 -35,-5 L -15,-10 Q -8,-20 0,-35 Z" fill="white" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+    <!-- Plus sign -->
+    <line x1="28" y1="-28" x2="28" y2="-18" stroke="white" stroke-width="3" stroke-linecap="round"/>
+    <line x1="33" y1="-23" x2="23" y2="-23" stroke="white" stroke-width="3" stroke-linecap="round"/>
+    <!-- Small circle -->
+    <circle cx="-22" cy="25" r="4" fill="white"/>
+  </g>
+</svg>

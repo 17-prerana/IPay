@@ -1,0 +1,37 @@
+{
+  "name": "ipay-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "mongo:rs": "powershell -NoProfile -ExecutionPolicy Bypass -Command \"New-Item -ItemType Directory -Force -Path mongo-data | Out-Null; & 'C:\\Program Files\\MongoDB\\Server\\8.3\\bin\\mongod.exe' --dbpath mongo-data --replSet rs0 --port 27018 --bind_ip 127.0.0.1\"",
+    "mongo:init": "mongosh mongodb://127.0.0.1:27018/admin --eval \"try { rs.status().ok } catch (err) { rs.initiate({_id: 'rs0', members: [{ _id: 0, host: '127.0.0.1:27018' }]}) }\"",
+    "mongo:status": "mongosh mongodb://127.0.0.1:27018/admin --eval \"rs.status()\"",
+    "test": "jest --runInBand",
+    "test:syntax": "node --check server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.5.2",
+    "express-validator": "^7.3.2",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.6.2",
+    "nodemailer": "^8.0.7",
+    "winston": "^3.19.0"
+  },
+  "devDependencies": {
+    "jest": "^30.4.2",
+    "mongodb-memory-server-core": "^11.1.0",
+    "nodemon": "^3.1.14",
+    "supertest": "^7.2.2"
+  }
+}

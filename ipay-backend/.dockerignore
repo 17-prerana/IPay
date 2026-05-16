@@ -1,0 +1,12 @@
+node_modules
+npm-debug.log*
+.env
+.git
+.gitignore
+coverage
+mongo-data
+mongo-rs.log
+tests
+jest.config.js
+Dockerfile
+docker-compose.yml
